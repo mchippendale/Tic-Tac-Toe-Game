@@ -1,7 +1,7 @@
 
 document.querySelector('.game-tile').dataset.square
 
-// DECLARATIONS: 
+// -----------------------------------DECLARATIONS:-----------------------------------
 
 var gameTile = document.querySelectorAll('.game-tile')
 
@@ -13,20 +13,56 @@ var player2SelectBox = document.querySelector('#select-p2')
 
 var newGameBtn = document.querySelector('.new-game-btn')
 
+var displayWinner = document.querySelector('#display-winner')
+
 var p1Moves = []
 var p2Moves = []
 var currentPlayer = ""
 
 
-// FUNCTIONS:
+// -----------------------------------FUNCTIONS:-----------------------------------
 
 
 function handleTurn (event) {
     if (currentPlayer == 'player1') {
-        playerOneMove(event)
+        var tile = event.target
+        tile.classList.add('light-green')
+        player1SelectBox.classList.remove('light-green')
+        currentPlayer = ""
+        playerMove(event, p1Moves)
+
     } else if (currentPlayer == 'player2'){
-        playerTwoMove(event)
+        var tile = event.target
+        tile.classList.add('light-purple')
+        player1SelectBox.classList.remove('light-green')
+        currentPlayer = ""
+        playerMove(event, p2Moves)
     } 
+}
+
+function playerMove (event, array) {
+    var tile = event.target
+    array.push(tile.dataset.square)
+
+    if (array.includes('1') && array.includes('2') && array.includes('3')) {
+        return displayWinner.textContent = `You win`
+    } else if (array.includes('4') && array.includes('5') && array.includes('6')) {
+        return displayWinner.textContent = `You win`
+    } else if (array.includes('7') && array.includes('8') && array.includes('9')) {
+        return displayWinner.textContent = `You win`
+    } else if (array.includes('1') && array.includes('5') && array.includes('9')) {
+        return displayWinner.textContent = `You win`
+    } else if (array.includes('7') && array.includes('5') && array.includes('3')) {
+        return displayWinner.textContent = `You win`
+    } else if (array.includes('1') && array.includes('4') && array.includes('7')) {
+        return displayWinner.textContent = `You win`
+    } else if (array.includes('2') && array.includes('5') && array.includes('8')) {
+        return displayWinner.textContent = `You win`
+    } else if (array.includes('3') && array.includes('6') && array.includes('9')) {
+        return displayWinner.textContent = `You win`
+    } else {
+        checkDraw()
+    }
 }
 
 
@@ -35,68 +71,9 @@ function SelectPlayerOne() {
     currentPlayer = "player1"
 }
 
-function playerOneMove(event) {
-
-    var tile = event.target
-    tile.classList.add('light-green') 
-    p1Moves.push(tile.dataset.square)
-    player1SelectBox.classList.remove('light-green')
-    currentPlayer = ""
-
-    if (p1Moves.includes('1') && p1Moves.includes('2') && p1Moves.includes('3')) {
-        return console.log('you win')
-    } else if (p1Moves.includes('4') && p1Moves.includes('5') && p1Moves.includes('6')) {
-        return console.log('you win')
-    } else if (p1Moves.includes('7') && p1Moves.includes('8') && p1Moves.includes('9')) {
-        return console.log('you win')
-    } else if (p1Moves.includes('1') && p1Moves.includes('5') && p1Moves.includes('9')) {
-        return console.log('you win')
-    } else if (p1Moves.includes('7') && p1Moves.includes('5') && p1Moves.includes('3')) {
-        return console.log('you win')
-    } else if (p1Moves.includes('1') && p1Moves.includes('4') && p1Moves.includes('7')) {
-        return console.log('you win')
-    } else if (p1Moves.includes('2') && p1Moves.includes('5') && p1Moves.includes('8')) {
-        return console.log('you win')
-    } else if (p1Moves.includes('3') && p1Moves.includes('6') && p1Moves.includes('9')) {
-        return console.log('you win')
-    } else {
-        checkDraw()
-    }
-}
 
 function playerOneWins() {
     
-}
-
-function playerTwoMove(event) {
-
-    var tile = event.target
-    tile.classList.add('light-purple') 
-    p2Moves.push(tile.dataset.square)
-    
-    player2SelectBox.classList.remove('light-purple')
-    currentPlayer = ""
-
-    if (p2Moves.includes('1') && p2Moves.includes('2') && p2Moves.includes('3')) {
-        return p2Moves
-    } else if (p2Moves.includes('4') && p2Moves.includes('5') && p2Moves.includes('6')) {
-        return console.log('you win')
-    } else if (p2Moves.includes('7') && p2Moves.includes('8') && p2Moves.includes('9')) {
-        return console.log('you win')
-    } else if (p2Moves.includes('1') && p2Moves.includes('5') && p2Moves.includes('9')) {
-        return console.log('you win')
-    } else if (p2Moves.includes('7') && p2Moves.includes('5') && p2Moves.includes('3')) {
-        return console.log('you win')
-    } else if (p2Moves.includes('1') && p2Moves.includes('4') && p2Moves.includes('7')) {
-        return console.log('you win')
-    } else if (p2Moves.includes('2') && p2Moves.includes('5') && p2Moves.includes('8')) {
-        return console.log('you win')
-    } else if (p2Moves.includes('3') && p2Moves.includes('6') && p2Moves.includes('9')) {
-        return console.log('you win')
-    } else {
-        checkDraw()
-    }
-
 }
 
 
@@ -124,18 +101,16 @@ function handleNewGame() {
 
 
 
-
-
-
-
-
-
-// EVENT LISTENERS:
+// -----------------------------------EVENT LISTENERS:-----------------------------------
 
 for (var i = 0; i < gameTile.length; i++) {
     gameTile[i].addEventListener('click', handleTurn)
 }
 
+
+
 player1Btn.addEventListener('click', SelectPlayerOne)
 player2Btn.addEventListener('click', SelectPlayerTwo)
 newGameBtn.addEventListener('click', handleNewGame)
+
+

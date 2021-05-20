@@ -13,6 +13,7 @@
     margin: 0 auto;
     margin-top: 50px;
     font-size: 300%;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .game-board {
@@ -25,26 +26,42 @@
     border: 2px solid black;
     place-items: center;
     margin: 0 auto;
-    padding: 5px
+    padding: 5px;
 }
 
 .game-tile {
     display: grid;
     place-items: center;
     border: 1px solid grey;
-    width: 90%;
-    height: 90%;
+    width: 85%;
+    height: 85%;
     background-color: white;
     border-radius: 50% 50% 50% 50%;
     font-size: 200%;
+    cursor: pointer;
+}
+
+.game-tile:hover {
+    box-shadow: 0 0 10px gray;
+}
+
+.selection {
+    display: grid;
+    place-items: center;
+    border: 1px solid   black;
+    border-radius: 3px;
+    background-color: white;
 }
 
 .light-green {
     background-color: #6efc6e;
+    transition: all 0.2s linear;
+    /* background-image: url(https://placekeanu.com/150/150); */
 }
 
 .light-purple {
     background-color: #d363f9;
+    transition: all 0.5s linear;
 }
 
 .game-buttons {
@@ -57,6 +74,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr, 1fr, 1fr;
     place-items: center;
+    border-radius: 0px 0px 20px 20px;
 }
 
 
@@ -66,8 +84,24 @@
 }
 
 .selection {
+    display: grid;
+    place-items: center;
     border: 1px solid   black;
+    border-radius: 3px;
+    background-color: white;
 }
+
+/* #select-p1 {
+    background-color: white;
+} */
+
+#select-p1:hover {
+    background-color: #6efc6e;
+  } 
+
+  #select-p2:hover {
+    background-color: #d363f9;
+  } 
 
 .creator-details {
     text-align: center;
