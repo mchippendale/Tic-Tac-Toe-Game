@@ -35,6 +35,8 @@
     width: 90%;
     height: 90%;
     background-color: white;
+    border-radius: 50% 50% 50% 50%;
+    font-size: 200%;
 }
 
 .light-green {
