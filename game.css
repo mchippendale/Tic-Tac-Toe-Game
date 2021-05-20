@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: sans-serif;
+}
+
 .game-title {
     display: grid;
     place-items: center;
@@ -37,7 +41,6 @@
     height: 85%;
     background-color: white;
     border-radius: 50% 50% 50% 50%;
-    font-size: 200%;
     cursor: pointer;
 }
 
@@ -50,18 +53,30 @@
     place-items: center;
     border: 1px solid   black;
     border-radius: 3px;
-    background-color: white;
 }
 
 .light-green {
     background-color: #6efc6e;
-    transition: all 0.2s linear;
+    /* background-image: url(https://placekeanu.com/150/150); */
+}
+
+.light-green-text {
+    font-size: 550%;
+    font-family: 'Krona One', sans-serif;
+    color: #6efc6e;
+    box-shadow: inset 0 0 5px grey;
     /* background-image: url(https://placekeanu.com/150/150); */
 }
 
 .light-purple {
     background-color: #d363f9;
-    transition: all 0.5s linear;
+}
+
+.light-purple-text {
+    font-size: 550%;
+    font-family: 'Krona One', sans-serif;
+    color: #d363f9;
+    box-shadow: inset 0 0 5px grey;
 }
 
 .game-buttons {
@@ -83,13 +98,6 @@
     height: 50px;
 }
 
-.selection {
-    display: grid;
-    place-items: center;
-    border: 1px solid   black;
-    border-radius: 3px;
-    background-color: white;
-}
 
 /* #select-p1 {
     background-color: white;

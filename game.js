@@ -26,15 +26,19 @@ var currentPlayer = ""
 function handleTurn (event) {
     if (currentPlayer == 'player1') {
         var tile = event.target
-        tile.classList.add('light-green')
+        tile.classList.add('light-green-text')
+        tile.textContent = 'X'
+
         player1SelectBox.classList.remove('light-green')
         currentPlayer = ""
         playerMove(event, p1Moves)
 
     } else if (currentPlayer == 'player2'){
         var tile = event.target
-        tile.classList.add('light-purple')
-        player1SelectBox.classList.remove('light-green')
+        tile.classList.add('light-purple-text')
+        tile.textContent = 'O'
+
+        player1SelectBox.classList.remove('light-purple')
         currentPlayer = ""
         playerMove(event, p2Moves)
     } 
@@ -96,6 +100,7 @@ function handleNewGame() {
     }
     p1Moves = []
     p2Moves = []
+    displayWinner.textContent = ""
 }
 
 
