@@ -22,6 +22,7 @@ var currentPlayer = ""
 var gameTitle = document.querySelector('.game-title')
 var gameDescription = document.querySelector('.game-description')
 var gameInstruction = document.querySelector('.game-instructions')
+
 var factOne = document.querySelector('.fact-1')
 var exitFactOne = document.querySelector('.exit1-symbol')
 var fact1Container = document.querySelector('.fact1-container')
@@ -32,6 +33,8 @@ var exitFactTwo = document.querySelector('.exit2-symbol')
 var factThree = document.querySelector('.fact-3')
 var exitFactThree = document.querySelector('.exit3-symbol')
 
+var audioFirstFact = document.querySelector('.audio-first-fact')
+var audioSecondFact = document.querySelector('.audio-second-fact')
 //-----------------------------------FUNCTIONS:-----------------------------------
 
 
@@ -145,6 +148,7 @@ function handleNewGame() {
 function turnOnFact1() {
     exitFactOne.style.color = 'black'
     factOne.textContent = 'Games played on three-in-a-row boards can be traced back to ancient Egypt, where such game boards have been found on roofing tiles dating from around 1300 BC'
+    audioFirstFact.play()
 }
 
 function turnOffFact1() {
@@ -155,6 +159,7 @@ function turnOffFact1() {
 function turnOnFact2() {
     exitFactTwo.style.color = 'black'
     factTwo.textContent = 'Medieval pagan rituals were often linked to the game. Back then, they thought the nine square grid held magical properties.'
+    audioSecondFact.play()
 }
 
 function turnOffFact2() {
