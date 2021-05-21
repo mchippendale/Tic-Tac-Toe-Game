@@ -8,37 +8,77 @@
     <link rel="stylesheet" href="game.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="game-title">Tic Tac Toe</header>
-    <main>
-        <section class="game-board">
+    <div class="wrap-container">
+        <div class="game-history">
+            <div class="fact1-container"> 
+                <span class="exit1-symbol">&times; History</span>
+                <p class="fact-1"></p>
+            </div>  
+            <div></div>
+            <div class="fact4-container"> 
+                <span class="exit3-symbol">&times; Interesting</span>
+                <p class="fact-4"></p>
+            </div> 
+            <div class="fact3-container">
+                <span class="exit3-symbol">&times; Interesting</span>
+                <p class="fact-3"></p>
+            </div>
+        </div>
+        <main>
+            <header>
 
-            <div class="game-tile" data-square="1"></div>
-            <div class="game-tile" data-square="2"></div>
-            <div class="game-tile" data-square="3"></div>
-            <div class="game-tile" data-square="4"></div>
-            <div class="game-tile" data-square="5"></div>
-            <div class="game-tile" data-square="6"></div>
-            <div class="game-tile" data-square="7"></div>
-            <div class="game-tile" data-square="8"></div>
-            <div class="game-tile" data-square="9"></div>
+                <div class="game-title">Tic Tac Toe</div>
+                <div class="game-description">
+                    <p>A game with two players. Play three in a row to win</p>
+                </div>
 
-        </section>
-        <section class="game-buttons">
+            </header>
 
-            <button class="new-game-btn">New game</button>
-            <button class="player1-btn">Player 1</button>
-            <button class="player2-btn">Player 2</button>
-            <div class="selection" id="display-winner"></div>
-            <div class="selection" id="select-p1"></div>
-            <div class="selection" id="select-p2"></div>
+            <section class="game-board">
 
-        </section>
-    </main>
+                <div class="game-tile" data-square="1" ></div>
+                <div class="game-tile" data-square="2" ></div>
+                <div class="game-tile" data-square="3" ></div>
+                <div class="game-tile" data-square="4" ></div>
+                <div class="game-tile" data-square="5" ></div>
+                <div class="game-tile" data-square="6" ></div>
+                <div class="game-tile" data-square="7" ></div>
+                <div class="game-tile" data-square="8" ></div>
+                <div class="game-tile" data-square="9" ></div>
 
-    <footer class="creator-details">&copy; Catan Mogul Games.</footer>
+            </section>
+            <section>
+                <div class="game-instructions">
+                    <p>Select which your colour each turn</p>
+                </div>
+            </section>
+            <section class="game-buttons">
 
+                <button class="new-game-btn">New game</button>
+                <button class="player1-btn">Player 1</button>
+                <button class="player2-btn">Player 2</button>
+                <div class="selection" id="display-winner"></div>
+                <div class="selection" id="select-p1"></div>
+                <div class="selection" id="select-p2"></div>
+
+            </section>
+            <footer class="creator-details">&copy; Catan Mogul Games.</footer>
+
+        </main>
+        <div class="game-facts">
+            <div></div>
+            <div class="fact2-container"> 
+                <span class="exit2-symbol">&times; Did you know?</span>
+                <p class="fact-2"></p>
+            </div>  
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <script src="game.js"></script>
 
 </body>

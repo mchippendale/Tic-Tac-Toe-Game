@@ -4,8 +4,48 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Comfortaa', cursive;
 }
+
+.wrap-container {
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 50px;
+    gap: 15px
+}
+
+.game-history {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 150px;
+    height:700px
+}
+
+.game-facts {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 150px
+}
+
+.fact1-container-effect {
+    border: 1px solid black;
+    box-shadow: 0 0 10px grey;
+    border-radius: 20px;
+}
+
+.fact4-container {
+    height: 80px;
+    width: 100%
+}
+
+.player2-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 150px
+}
+
 
 .game-title {
     display: grid;
@@ -13,20 +53,55 @@ body {
     background-color: rgb(255, 255, 118);
     border: 2px solid black;
     width: 500px;
-    height: 100px;
+    height: 70px;
     margin: 0 auto;
-    margin-top: 50px;
     font-size: 300%;
+    border-bottom: 0px;
     border-radius: 20px 20px 0px 0px;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.exit1-symbol {
+    cursor: pointer;
+    color: white;
+}
+
+.exit2-symbol {
+    cursor: pointer;
+    color: white;
+}
+
+.exit3-symbol {
+    cursor: pointer;
+    color: white;
+}
+
+.black-text {
+    color: black;
+}
+
+.game-description {
+    display: grid;
+    place-items: center;
+    background-color: rgb(255, 255, 118);
+    border: 2px solid black;
+    width: 500px;
+    height: 50px;
+    margin: 0 auto;
+    border-top: 0px;
+    border-bottom: 0px;
+    font-family: 'Comfortaa', cursive;
+    cursor: pointer;
 }
 
 .game-board {
-    height: 500px;
+    height: 400px;
     width: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    background-color: lightblue;
+    background-color: #81d4fa;
     border: 2px solid black;
     place-items: center;
     margin: 0 auto;
@@ -37,10 +112,10 @@ body {
     display: grid;
     place-items: center;
     border: 1px solid grey;
-    width: 85%;
-    height: 85%;
+    width: 70%;
+    height: 80%;
     background-color: white;
-    border-radius: 50% 50% 50% 50%;
+    border-radius: 40%;
     cursor: pointer;
 }
 
@@ -52,7 +127,8 @@ body {
     display: grid;
     place-items: center;
     border: 1px solid   black;
-    border-radius: 3px;
+    border-radius: 5px;
+    background-color: white;
 }
 
 .light-green {
@@ -68,6 +144,7 @@ body {
     /* background-image: url(https://placekeanu.com/150/150); */
 }
 
+
 .light-purple {
     background-color: #d363f9;
 }
@@ -79,39 +156,150 @@ body {
     box-shadow: inset 0 0 5px grey;
 }
 
+.game-instructions {
+    display: grid;
+    place-items: center;
+    background-color: rgb(252, 138, 216);
+    border: 2px solid black;
+    width: 500px;
+    height: 50px;
+    margin: 0 auto;
+    border-top: 0px;
+    border-bottom: 0px;
+    font-family: 'Comfortaa';
+    cursor: pointer;
+}
+
 .game-buttons {
-    background-color: lightpink;
+    background-color: #ffb5db;
     border: 2px solid black;
     width: 500px;
     height: 150px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr, 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr 1fr;
     place-items: center;
     border-radius: 0px 0px 20px 20px;
+    border-top: 0px;
 }
 
 
-.game-buttons  > div, button {
+.game-buttons  > div  {
+    width: 100px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.game-buttons  > button  {
     width: 100px;
     height: 50px;
 }
 
+.player2-btn {
+    font-family: 'Comfortaa';
+    border: 4px solid #d363f9;
+    border-radius: 0.25rem;
+    background: white;
+    color: black;
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    cursor: pointer;
+}
 
-/* #select-p1 {
-    background-color: white;
-} */
+.player2-btn:hover {
+    background-color: whitesmoke;
+}
+
+.player1-btn {
+    font-family: 'Comfortaa';
+    border: 4px solid #6efc6e;
+    border-radius: 0.25rem;
+    background: white;
+    color: black;
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    cursor: pointer;
+}
+
+.player1-btn:hover {
+    background-color: whitesmoke;
+}
+
+.new-game-btn {
+    font-family: 'Comfortaa';
+    border: 4px solid #ff993f;
+    border-radius: 0.25rem;
+    background: white;
+    color: black;
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    cursor: pointer;
+}
+
+.new-game-btn:hover {
+    background-color: whitesmoke;
+}
 
 #select-p1:hover {
     background-color: #6efc6e;
-  } 
+} 
 
-  #select-p2:hover {
+#select-p2:hover {
     background-color: #d363f9;
-  } 
+} 
+
+#display-winner {
+    background-color: white;
+    font-size: 100%;
+}
 
 .creator-details {
+    display: grid;
+    place-items: center;
     text-align: center;
-    margin-top: 50px;
+    height: 80px;
 }
+
+
+
+  
+
+
+
+
+
+/* @media (max-width: 500px) {
+    
+    .game-title {
+        width
+    }
+    
+    .game-board {
+        
+    }
+    
+    .game-buttons {
+        
+    }
+    
+    .creator-details {
+        
+    }
+    
+} */
