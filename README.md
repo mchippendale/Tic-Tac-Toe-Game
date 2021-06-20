@@ -1,7 +1,7 @@
 
 # Tic Tac Toe
 
-[Tic Tac Toe Game LINK - Play me please](https://mchippendale.github.io/Tic-Tac-Toe-Game/)
+[Tic Tac Toe Game LINK - Play the game](https://mchippendale.github.io/Tic-Tac-Toe-Game/)
 
 ## Summary
 
