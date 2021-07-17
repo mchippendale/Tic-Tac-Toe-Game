@@ -8,7 +8,6 @@
 The class project was to create an interactive Tic-Tac-Toe game using Javascript, HTML and CSS. The requirements were for a two player game with a winner being able to line a either three X's or three O's, horizontally, vertically or diagonally. Then display the winner. 
 
 ## User Stories with Associated Technical Tasks
-___
 
 ### Key Stories
 
@@ -22,14 +21,12 @@ ___
 * Customise the player symbol 
 
 ## Landing Page Layout 
-___
 
 * Display 3 x 3 grid in the centre of the page. 
 * Title and description of the game
 * Game instructions
 
 ## Functionality 
-___
 
 * Select player to allow X or O to be placed. 
 * Users then need to interact to rotate turn. 
@@ -37,7 +34,6 @@ ___
 * If no winner, draw. New game resets the game. 
 
 ## Functionality 
-___
 
 * JavaScript
 * HTML
